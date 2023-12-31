@@ -36,6 +36,3 @@ services:
     ports:
       - 9100:9100
   
-volumes:
-  prometheus:
-  grafana:
