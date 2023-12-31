@@ -12,7 +12,6 @@ services:
     user: root
     volumes:
       - ./prometheus:/etc/prometheus
-      - /data/prom_data:/prometheus
 
   grafana:
     image: grafana/grafana
@@ -36,3 +35,7 @@ services:
     restart: unless-stopped
     ports:
       - 9100:9100
+  
+  volumes:
+    - prometheus
+    - grafana
